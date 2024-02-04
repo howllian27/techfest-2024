@@ -8,10 +8,10 @@ import os
 # configure page
 def configure_streamlit():
     st.set_page_config(page_title="Generate Your Own Storyboard Today With Creati.AI, powered by OpenAI and LlamaIndex", 
-                       page_icon="🦙", layout="centered", initial_sidebar_state="auto")
+                       page_icon="📱", layout="centered", initial_sidebar_state="auto")
     openai.api_key = "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"
     st.title("Chat with Your Story Materials, powered by OpenAI & LlamaIndex 💬📔")
-    st.info("Go on ", icon="📃")
+    st.info("Go on to explore other features at our website!", icon="📃")
 
 # Initialize the chat messages history
 def init_messages():         
@@ -49,22 +49,26 @@ def upload_file_and_load_data():
         save_uploaded_file('./data', uploaded_file)
         load_data()
         return load_data()
-    
+
+# Function to handle user input and generate response    
 def user_input_and_response():
     if prompt := st.chat_input("Your question"):
         st.session_state.messages.append({"role": "user", "content": prompt})
     display_messages()
     generate_response(prompt)
 
+# Function to display chat messages
 def display_messages():
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
             st.write(message["content"])
 
+# Initialize the chat engine
 def init_chat_engine(index):
     if "chat_engine" not in st.session_state:
         st.session_state.chat_engine = index.as_chat_engine(chat_mode="condense_question", verbose=True)
 
+# Generate response
 def generate_response(prompt):
     if st.session_state.messages[-1]["role"] != "assistant":
         with st.chat_message("assistant"):
@@ -73,6 +77,7 @@ def generate_response(prompt):
                 st.write(response.response)
                 st.session_state.messages.append({"role": "assistant", "content": response.response})
 
+# Main function
 def main():
     configure_streamlit()
     init_messages()
@@ -84,5 +89,6 @@ def main():
         init_chat_engine(index)
     user_input_and_response()
 
+# Run the main function
 if __name__ == "__main__":
     main()
