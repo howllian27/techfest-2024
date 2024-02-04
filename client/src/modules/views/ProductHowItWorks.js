@@ -103,6 +103,7 @@ function ProductHowItWorks() {
             </Grid>
           </Grid>
         </div>
+        <Link to="/Choices">
         <Button
           color="secondary"
           size="large"
@@ -111,6 +112,7 @@ function ProductHowItWorks() {
         >
           Get started
         </Button>
+        </Link>
       </Container>
     </Box>
   );
