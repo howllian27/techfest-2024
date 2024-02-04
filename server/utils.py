@@ -1,6 +1,7 @@
 from openai import OpenAI
+import os
 
-client = OpenAI(api_key = "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")
+client = OpenAI(api_key = os.getenv("OPENAI_API_KEY"))
 
 def song_reccommender (input):
     completion = client.chat.completions.create(
