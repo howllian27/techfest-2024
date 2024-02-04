@@ -1,13 +1,9 @@
 import streamlit as st
 from llama_index import VectorStoreIndex, ServiceContext, Document
 from llama_index.llms import OpenAI
-from dotenv import load_dotenv
 import openai
 from llama_index import SimpleDirectoryReader
 import os
-
-# Initialize environment variables
-load_dotenv()
 
 # configure page
 def configure_streamlit():
