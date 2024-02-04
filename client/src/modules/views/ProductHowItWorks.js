@@ -105,21 +105,21 @@ function ProductHowItWorks() {
         </div>
         <Grid container spacing={2} sx={{ justifyContent: 'center' }} marginTop={2}>
           <Grid item>
-            <Link to="/StoryBoardPage">
+            <Link to="/storyboard">
               <Button color="secondary" size="large" variant="contained">
                 Storyboarding
               </Button>
             </Link>
           </Grid>
           <Grid item>
-            <Link to="/AudioPage">
+            <Link to="/audio">
               <Button color="secondary" size="large" variant="contained">
                 Audio Creation
               </Button>
             </Link>
           </Grid>
           <Grid item>
-            <Link to="/CoverPage">
+            <Link to="coverpage">
               <Button color="secondary" size="large" variant="contained">
                 CoverPage Creation
               </Button>

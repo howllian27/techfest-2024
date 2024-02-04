@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import AppBar from '../components/AppBar';
 import Toolbar from '../components/Toolbar';
+
 import { Link as RouterLink } from "react-router-dom";
 
 const rightLink = {
@@ -14,7 +15,7 @@ const rightLink = {
 function AppAppBar() {
   return (
     <div>
-      <AppBar position="fixed">
+      <AppBar position="fixed" >
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Box sx={{ flex: 1 }} />
           <Link 

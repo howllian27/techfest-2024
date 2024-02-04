@@ -1,0 +1,18 @@
+/* storyboard.css */
+
+/* storyboard.css or inline styles */
+.choice-text-container {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .choice-text-card {
+    background-color: #f4cfdf;
+    width: 70%; /* Adjust the width as needed */
+    padding: 30px; /* Adjust the padding as needed */
+    border-radius: 15px; /* Adjust the border-radius as needed */
+  }
+  
+  

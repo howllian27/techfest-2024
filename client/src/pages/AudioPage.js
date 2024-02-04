@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import AppAppBar from '../modules/views/AppAppBar';
-import ChoicesImage from '../modules/components/ChoiceImage';
-import ChoicesText from '../modules/components/ChoiceText';
-import ChoicesAudio from '../modules/components/ChoiceAudio';
+import Typography from '../modules/components/Typography'; 
+import ChoiceAudio from '../modules/components/ChoiceAudio';
+import './AudioPage.css';
 
 function AudioPage(){
     return (
         <div>
           <AppAppBar/>
-          <ChoicesAudio/>
+          <Typography variant="h4" align="center" sx={{ fontWeight: 'bold', marginTop: 4 }}>
+          AI Audio Generator
+          </Typography>
+          <ChoiceAudio/>
         </div>
       );
     
 }
 
-  
 
 export default AudioPage;

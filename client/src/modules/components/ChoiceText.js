@@ -21,14 +21,16 @@ export default function ChoiceText() {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <div style={{ width: '70%', maxWidth: '600px', textAlign: 'center' }}>
+    <Card sx={{backgroundColor: '#F4CFDF'  }}>
       <CardContent>
         <TextareaAutosize
-          minRows={3}
+          minRows={10}
+          maxRows={30}
           placeholder="Enter text (max 200 words)"
           value={textInput}
           onChange={handleTextInputChange}
-          style={{ width: '100%', resize: 'none' }}
+          style={{ width: '100%' }}
           maxLength="200"
         />
       </CardContent>
@@ -38,5 +40,7 @@ export default function ChoiceText() {
         </Button>
       </CardActions>
     </Card>
+    </div>
   );
 }
+

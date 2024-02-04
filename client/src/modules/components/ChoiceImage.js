@@ -16,7 +16,7 @@ export default function ChoicesImage() {
 
   const handleImageInputChange = (event) => {
     const files = event.target.files;
-    const selectedImagesArray = Array.from(files);
+    const selectedImagesArray = Array.from(files).slice(0, 5); // Limit to at most 5 images
     setSelectedImages(selectedImagesArray);
   };
 
@@ -27,11 +27,19 @@ export default function ChoicesImage() {
   };
 
   return (
-    <Card sx={{ maxWidth: 345, textAlign: 'center'}}>
+    <Card
+      sx={{
+        width: '70%', // Adjust the width as needed
+        margin: 'auto', // Center the card
+        textAlign: 'center',
+        marginTop: '50px',
+        backgroundColor: '#B6D8F2',
+        boxShadow: '10px 5px 5px #5784BA;', // Box shadow for a nice look
+        borderRadius: '12px',
+      }}
+    >
       <CardMedia
-        sx={{ height: 140}}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
+        sx={{ height: 200, width: '100%', objectFit: 'cover' }}
       />
       {selectedImages.length > 0 && (
         <div>
@@ -81,3 +89,5 @@ export default function ChoicesImage() {
     </Card>
   );
 }
+
+

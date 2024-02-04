@@ -1,30 +1,31 @@
-import * as React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import TextareaAutosize from '@mui/material/TextareaAutosize';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
-export default function ChoicesAudio() {
+export default function ChoiceAudio() {
   const [textInput, setTextInput] = useState('');
-  const [selectedImages, setSelectedImages] = useState([]);
+  const [selectedAudio, setSelectedAudio] = useState(null);
 
   const handleTextInputChange = (event) => {
     setTextInput(event.target.value);
   };
 
-  const handleImageInputChange = (event) => {
+  const handleAudioInputChange = (event) => {
     const files = event.target.files;
-    const selectedImagesArray = Array.from(files);
-    setSelectedImages(selectedImagesArray);
+    const selectedAudioFile = files[0]; // Allow only one audio file
+    setSelectedAudio(selectedAudioFile);
   };
 
   const handleUpload = () => {
     // Implement your upload logic here
     console.log('Text Input:', textInput);
-    console.log('Selected Images:', selectedImages);
+    console.log('Selected Audio:', selectedAudio);
   };
 
   return (
@@ -45,17 +46,17 @@ export default function ChoicesAudio() {
         />
       </CardContent>
       <CardActions>
-        <Button component="label" htmlFor="image-upload" size="small" variant="contained">
-          Upload Images
+        <Button component="label" htmlFor="audio-upload" size="small" variant="contained">
+          Upload Audio
           <input
-            id="image-upload"
+            id="audio-upload"
             type="file"
-            accept="image/*"
-            multiple
+            accept="audio/*"
             style={{ display: 'none' }}
-            onChange={handleImageInputChange}
+            onChange={handleAudioInputChange}
           />
         </Button>
+        <AudioPlayer src={selectedAudio && URL.createObjectURL(selectedAudio)} />
         <Button size="small" onClick={handleUpload} variant="contained">
           Upload
         </Button>
