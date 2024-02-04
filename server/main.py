@@ -8,4 +8,3 @@ app = FastAPI()
 async def songrecc_endpoint(input:str):
     songs = song_reccommender(input)
     return songs
-
