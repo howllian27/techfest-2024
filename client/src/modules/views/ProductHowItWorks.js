@@ -6,7 +6,6 @@ import Container from '@mui/material/Container';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
 
-
 const item = {
   display: 'flex',
   flexDirection: 'column',
