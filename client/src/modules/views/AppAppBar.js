@@ -27,6 +27,7 @@ function AppAppBar() {
           >
             {'content.AI'}
           </Link>
+          <Box sx={{ flex: 1 }} />
         </Toolbar>
       </AppBar>
       <Toolbar />

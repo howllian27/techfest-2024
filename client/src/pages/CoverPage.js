@@ -1,16 +1,14 @@
 // src/SelectChoices.js
 import React, { useState } from 'react';
 import AppAppBar from '../modules/views/AppAppBar';
-import Choices from '../modules/components/Choices';
+import ChoicesImage from '../modules/components/ChoiceImage';
+import './CoverPage.css'; 
 
-function ChoicesPage(){
+function CoverPage(){
     return (
         <div>
           <AppAppBar/>
-          <Choices/>
-          <Choices/>
-          <Choices/>
-
+          <ChoicesImage/>
         </div>
       );
     
@@ -18,4 +16,4 @@ function ChoicesPage(){
 
   
 
-export default ChoicesPage;
+export default CoverPage;

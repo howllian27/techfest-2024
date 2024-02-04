@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import StoryBoardPage from './pages/StoryBoardPage';
+import AudioPage from './pages/AudioPage';
+import CoverPage from './pages/CoverPage';
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -9,15 +12,23 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import ChoicesPage from './pages/ChoicesPage';
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
   },
   {
-    path: "Choices",
-    element: <ChoicesPage/>,
+    path: "coverpage",
+    element: <CoverPage/>,
+  },
+  {
+    path: "audio",
+    element: <AudioPage/>,
+  },
+  {
+    path: "storyboard",
+    element: <StoryBoardPage/>,
   },
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -103,7 +103,7 @@ function ProductHowItWorks() {
             </Grid>
           </Grid>
         </div>
-        <Link to="/Choices">
+        <Link to="/StoryBoardPage">
         <Button
           color="secondary"
           size="large"
