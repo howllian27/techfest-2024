@@ -39,11 +39,11 @@ function ProductValues() {
               </Typography>
               <Typography variant="h5">
                 {
-                  'From the latest trendy boutique hotel to the iconic palace with XXL pool'
+                  'instant generation of coverpages for social media posts'
                 }
 
                 {
-                  ', go for a mini-vacation just a few subway stops away from your home.'
+                  ', be sure to capture attention right away'
                 }
               </Typography>
             </Box>
@@ -61,10 +61,10 @@ function ProductValues() {
               </Typography>
               <Typography variant="h5">
                 {
-                  'Privatize a pool, take a Japanese bath or wake up in 900m2 of garden… '
+                  'anything you request for within a single click'
                 }
 
-                {'your Sundays will not be alike.'}
+                {', and delivered right to your fingertips'}
               </Typography>
             </Box>
           </Grid>
