@@ -13,7 +13,13 @@ load_dotenv()
 def configure_streamlit():
     st.set_page_config(page_title="Generate Your Own Storyboard Today With Creati.AI, powered by OpenAI and LlamaIndex", 
                        page_icon="📱", layout="centered", initial_sidebar_state="auto")
-    openai.api_key = os.environ.get("OPENAI_API_KEY")
+    # # File uploader in the sidebar on the left
+    with st.sidebar:
+        openai.api_key = st.text_input("Login Key", type="password")
+    if not openai.api_key:
+        st.info("Please add your Login Key to continue.")
+        st.stop()
+    print(openai.api_key)
     st.title("Chat with Your Story Materials, powered by OpenAI & LlamaIndex 💬📔")
     st.info("Go on to explore other features at our website!", icon="📃")
 
