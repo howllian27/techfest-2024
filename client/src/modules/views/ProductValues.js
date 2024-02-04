@@ -35,7 +35,7 @@ function ProductValues() {
                 sx={{ height: 55 }}
               />
               <Typography variant="h6" sx={{ my: 5 }}>
-                The best luxury hotels
+                generating aesthetic and attention-grabbing coverpages
               </Typography>
               <Typography variant="h5">
                 {
@@ -57,7 +57,7 @@ function ProductValues() {
                 sx={{ height: 55 }}
               />
               <Typography variant="h6" sx={{ my: 5 }}>
-                New experiences
+                personalised storyboarding of content
               </Typography>
               <Typography variant="h5">
                 {
@@ -77,7 +77,7 @@ function ProductValues() {
                 sx={{ height: 55 }}
               />
               <Typography variant="h6" sx={{ my: 5 }}>
-                Exclusive rates
+                Convenient and fast output
               </Typography>
               <Typography variant="h5">
                 {'By registering, you will access specially negotiated rates '}

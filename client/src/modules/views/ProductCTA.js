@@ -34,10 +34,10 @@ function ProductCTA() {
           >
             <Box component="form" onSubmit={handleSubmit} sx={{ maxWidth: 400 }}>
               <Typography variant="h2" component="h2" gutterBottom>
-                Receive offers
+                new updates
               </Typography>
               <Typography variant="h5">
-                Taste the holidays of the everyday close to home.
+                Provide us your email to receive new updates about our services
               </Typography>
               <TextField
                 noBorder
@@ -89,11 +89,6 @@ function ProductCTA() {
           />
         </Grid>
       </Grid>
-      <Snackbar
-        open={open}
-        closeFunc={handleClose}
-        message="We will send you our best offers, once a week."
-      />
     </Container>
   );
 }

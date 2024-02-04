@@ -11,6 +11,8 @@ function ProductSmokingHero() {
       sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', my: 9 }}
     >
       <Button
+      component="a"
+        href="https://github.com/howllian27/techfest-2024"
         sx={{
           border: '4px solid currentColor',
           borderRadius: 0,

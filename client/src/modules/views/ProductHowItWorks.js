@@ -5,6 +5,7 @@ import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
+import { Link } from 'react-router-dom';
 
 const item = {
   display: 'flex',
@@ -67,7 +68,7 @@ function ProductHowItWorks() {
                   sx={image}
                 />
                 <Typography variant="h5" align="center">
-                  Appointment every Wednesday 9am.
+                  Enter text prompts of outcomes you hope to see.
                 </Typography>
               </Box>
             </Grid>
@@ -81,8 +82,7 @@ function ProductHowItWorks() {
                   sx={image}
                 />
                 <Typography variant="h5" align="center">
-                  First come, first served. Our offers are in limited quantities, so
-                  be quick.
+                  Upload Images of products or services you like to share
                 </Typography>
               </Box>
             </Grid>
@@ -96,8 +96,8 @@ function ProductHowItWorks() {
                   sx={image}
                 />
                 <Typography variant="h5" align="center">
-                  {'New offers every week. New experiences, new surprises. '}
-                  {'Your Sundays will no longer be alike.'}
+                  {'Record you own voice'}
+                  {' or Upload audio files of your likings'}
                 </Typography>
               </Box>
             </Grid>
@@ -107,8 +107,8 @@ function ProductHowItWorks() {
           color="secondary"
           size="large"
           variant="contained"
-          component="a"
-          href="/premium-themes/onepirate/sign-up/"
+          component={Link}  // Use Link component
+          to="/functions"
           sx={{ mt: 8 }}
         >
           Get started
