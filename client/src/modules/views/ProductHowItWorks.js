@@ -1,11 +1,11 @@
 import * as React from 'react';
-
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
 
 const item = {
   display: 'flex',
@@ -96,23 +96,36 @@ function ProductHowItWorks() {
                   sx={image}
                 />
                 <Typography variant="h5" align="center">
-                  {'Record you own voice'}
+                  {'Record your own voice'}
                   {' or Upload audio files of your likings'}
                 </Typography>
               </Box>
             </Grid>
           </Grid>
         </div>
-        <Link to="/StoryBoardPage">
-        <Button
-          color="secondary"
-          size="large"
-          variant="contained"
-          sx={{ mt: 8 }}
-        >
-          Get started
-        </Button>
-        </Link>
+        <Grid container spacing={2} sx={{ justifyContent: 'center' }} marginTop={2}>
+          <Grid item>
+            <Link to="/StoryBoardPage">
+              <Button color="secondary" size="large" variant="contained">
+                Storyboarding
+              </Button>
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link to="/AudioPage">
+              <Button color="secondary" size="large" variant="contained">
+                Audio Creation
+              </Button>
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link to="/CoverPage">
+              <Button color="secondary" size="large" variant="contained">
+                CoverPage Creation
+              </Button>
+            </Link>
+          </Grid>
+        </Grid>
       </Container>
     </Box>
   );
