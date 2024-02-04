@@ -1,15 +1,19 @@
 import streamlit as st
 from llama_index import VectorStoreIndex, ServiceContext, Document
 from llama_index.llms import OpenAI
+from dotenv import load_dotenv
 import openai
 from llama_index import SimpleDirectoryReader
 import os
+
+# Initialize environment variables
+load_dotenv()
 
 # configure page
 def configure_streamlit():
     st.set_page_config(page_title="Generate Your Own Storyboard Today With Creati.AI, powered by OpenAI and LlamaIndex", 
                        page_icon="📱", layout="centered", initial_sidebar_state="auto")
-    openai.api_key = "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"
+    openai.api_key = os.environ.get("OPENAI_API_KEY")
     st.title("Chat with Your Story Materials, powered by OpenAI & LlamaIndex 💬📔")
     st.info("Go on to explore other features at our website!", icon="📃")
 
