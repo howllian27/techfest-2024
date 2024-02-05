@@ -1,6 +1,6 @@
 /* storyboard.css */
 .storyboard-container {
-  background-image: url('/Users/chenglin/Documents/techfest-2024/client/public/static/images/storyboard_bg.png');
+  background-image: url('../../public/static/images/storyboard_bg.png');
   background-size: cover;
   background-position: center;
   position: relative;

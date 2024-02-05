@@ -1,5 +1,5 @@
 .coverpage-container {
-  background-image: url("/Users/chenglin/Documents/techfest-2024/client/public/static/images/coverpage_bg.png");
+  background-image: url("../../public/static/images/coverpage_bg.png");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
