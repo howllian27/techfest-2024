@@ -1,10 +1,23 @@
 import streamlit as st
+import openai
+
+# configure page
+def configure_streamlit():
+    # # File uploader in the sidebar on the left
+    with st.sidebar:
+        openai.api_key = st.text_input("Login Key", type="password")
+    if not openai.api_key:
+        st.info("Please add your Login Key to continue.")
+        st.stop()
+    
+    return openai.api_key
 
 def takeInput():
     # Title
     st.title('Make me an Image')
-    # Ask for the API key
-    api_key = st.text_input("Enter your OpenAI API key:", type="password")
+
+    # configure the app
+    api_key = configure_streamlit()
 
     # Ask for the model choice
     model_choice = st.selectbox(

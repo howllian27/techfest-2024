@@ -4,7 +4,7 @@ from io import BytesIO
 from PIL import Image
 
 def generateImage(client, model_choice, prompt):
-    if st.button("Generate Image"):
+    if st.button("Generate Post"):
         # create the image generation request
         response = client.images.generate(
             model=model_choice,
