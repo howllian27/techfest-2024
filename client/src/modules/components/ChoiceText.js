@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -8,6 +8,7 @@ import TextareaAutosize from '@mui/material/TextareaAutosize';
 
 export default function ChoiceText() {
   const [textInput, setTextInput] = useState('');
+  
 
   const handleTextInputChange = (event) => {
     const inputValue = event.target.value;
@@ -22,7 +23,6 @@ export default function ChoiceText() {
   };
 
   return (
-    
       
     <div style={{ width: '70%', maxWidth: '600px', textAlign: 'center' }}>
     <Card sx={{backgroundColor: '#FFFFF', boxShadow: '0px 4px 8px rgba(255, 196, 212, 1.2)' }}>

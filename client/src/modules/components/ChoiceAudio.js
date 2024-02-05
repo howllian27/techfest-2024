@@ -1,29 +1,54 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
+
 export default function ChoiceAudio() {
   const [textInput, setTextInput] = useState('');
   const [selectedAudio, setSelectedAudio] = useState(null);
   const [audioOutput, setAudioOutput] = useState('');
+  // const [posts, setPosts] = useState([]);
+
+  var jsonData = {
+    "voice_url": textInput
+  }
+  //  useEffect(() => {
+  //     fetch('http://localhost:8000')
+  //        .then((res) => res.json())
+  //        .then((data) => {
+  //           console.log(data);
+  //           //setPosts(data);
+  //        })
+  //        .catch((err) => {
+  //           console.log(err.message);
+  //        });
+  //  }, []);
 
   const handleTextInputChange = (event) => {
     setTextInput(event.target.value);
   };
 
-  const handleAudioInputChange = (event) => {
-    const files = event.target.files;
-    const selectedAudioFile = files[0]; // Allow only one audio file
-    setSelectedAudio(selectedAudioFile);
-  };
 
   const handleUpload = () => {
     // Implement your upload logic here
     console.log('Text Input:', textInput);
     console.log('Selected Audio:', selectedAudio);
+
+    fetch('http://localhost:8000/song_recc/' ,{
+      method: 'put',
+      mode: 'cors',
+      body: JSON.stringify(jsonData)
+
+    })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => {
+    console.log(error);
+  });
+    
 
     // Simulate audio processing logic
     // For demonstration purposes, it sets the audioOutput to a simple message
