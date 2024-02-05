@@ -1,12 +1,11 @@
 import streamlit as st
 
-def generateCaption(client):
+def generateCaption(client, prompt):
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "You are an assistant who helps come up with fun trendy Instagram post captions."},
-            {"role": "user", "content": "I baked a cake with some berries on top because it's my dog's birthday."},
-            {"role": "assistant", "content": "Baking love and joy for my fur baby's celebration! 🍰"},
+            {"role": "system", "content": "You are a instagram post caption expert who helps come up with 3 fun trendy Instagram post captions that is only 1 phrase with adequate emojis."},
+            {"role": "user", "content": prompt}
         ],
         temperature=1,
         max_tokens=256,
@@ -15,4 +14,4 @@ def generateCaption(client):
         presence_penalty=0
     )
     
-    st.write(response)
+    st.write(response.choices[0].message.content)
