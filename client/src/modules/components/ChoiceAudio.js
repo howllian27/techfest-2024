@@ -12,9 +12,6 @@ export default function ChoiceAudio() {
   const [audioOutput, setAudioOutput] = useState('');
   // const [posts, setPosts] = useState([]);
 
-  var jsonData = {
-    "voice_url": textInput
-  }
   //  useEffect(() => {
   //     fetch('http://localhost:8000')
   //        .then((res) => res.json())
@@ -36,23 +33,32 @@ export default function ChoiceAudio() {
     // Implement your upload logic here
     console.log('Text Input:', textInput);
     console.log('Selected Audio:', selectedAudio);
-
-    fetch('http://localhost:8000/song_recc/' ,{
-      method: 'put',
-      mode: 'cors',
-      body: JSON.stringify(jsonData)
-
+  
+    fetch('http://localhost:8000/voice/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        voice_url: textInput,
+      }),
     })
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch((error) => {
-    console.log(error);
-  });
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => {
+        console.log(error);
+      });
     
 
     // Simulate audio processing logic
     // For demonstration purposes, it sets the audioOutput to a simple message
-    setAudioOutput('Audio processed successfully!');
+    fetch('http://localhost:8000/voice_zip/')
+      .then((response) => response.json())
+      .then((data) => setAudioOutput(data.voice_zip))
+      .catch((error) => {
+        console.log(error);
+      });
+    
   };
 
   return (
