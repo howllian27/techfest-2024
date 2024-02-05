@@ -5,11 +5,11 @@ Welcome to Contentify, an all-in-one digital creation platform, designed to be a
 
 ### Solutions Tailored for the Creator's Journey:
 
--   Storiation: Elevate your storytelling with our advanced chatbot, designed to help you craft compelling narratives with ease. From initial conception to final storyline, the Narrative Architect guides you through creating mesmerizing tales that capture the imagination. It can even personally curate songs customised to your own unique storyline!
+-   Storiation:  Users may interact with **Storiation**, a chatbot powered by OpenAI and LlamaIndex. Storiation inspires users by aiding in the journey to create a _unique story for their content_, from initial conception to the final storyline. Storiation even curates a list of _3 theme-appropriate songs_ to accompany the storyline.
 
--   Melodiation: Experience the future of music creation with Melody Weaver, our AI-driven music cover generator. Built on a bespoke RVC model and our own proprietary pipeline, it customizes and tailors musical pieces that resonate with your unique creative voice, ensuring each note contributes to your auditory masterpiece.
+-   Melodiation: Our flagship AI music cover generator, **Melodiation**, allows the _creation of any music cover (with the previously curated songs or anything of your own choice) with your own voice based on your own streaming content_! Powered by Replicant, AI-generated voice models and covers can be created in a matter of minutes.
 
--   Visionation: Bring your visual concepts to life with Visionary Palette, our state-of-the-art image generator. Specializing in crafting bespoke post covers, this tool transforms your ideas into visually captivating images that speak volumes, ensuring your content stands out in the digital landscape.
+-   Visionation: To bring their visions to life, content creators can create their own unique posts using **Visionation** where both the _covers and the captions_ will be created using OpenAI models, ChatGPT and Dall-E.
 
 ### Embracing the Creator's Odyssey:
 
@@ -18,3 +18,13 @@ Contentify isn't merely a platform; it's an integral companion on your creative 
 * * * * *
 
 Dive into the world of Contentify, where your creative potential knows no bounds. Join us, and let's embark on this exquisite journey of creation together.
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
