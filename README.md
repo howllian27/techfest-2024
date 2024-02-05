@@ -1,7 +1,7 @@
 Contentify: Your Digital Creation Maestro
 =========================================
 
-Welcome to Contentify, an all-in-one digital creation platform, designed to be an end-to-end solution that enhances every phase of your creative process. As your personal AI companion for multi-faceted content creation, Contentify offers an exquisite suite of solutions, each crafted to perfection to cater to your every creative need.
+Welcome to Contentify, an all-in-one digital creation platform, designed to be an end-to-end solution that enhances every phase of your creative process on social media. As your personal AI companion for multi-faceted content creation, Contentify offers an exquisite suite of solutions, each crafted to perfection to cater to your every creative need.
 
 ### Solutions Tailored for the Creator's Journey:
 
