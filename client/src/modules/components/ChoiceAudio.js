@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
-import TextareaAutosize from '@mui/material/TextareaAutosize';
+import CardMedia from '@mui/material/CardMedia';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 
@@ -29,23 +27,13 @@ export default function ChoiceAudio() {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
       <CardMedia
-        sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
+        sx={{ height: 200 }}
+        image="/static/images/audio_bgm.jpg"  // Replace with the path to your image
+        title="Your Image"
       />
-      <CardContent>
-        <TextareaAutosize
-          minRows={3}
-          placeholder="Enter text (max 200 words)"
-          value={textInput}
-          onChange={handleTextInputChange}
-          style={{ width: '100%', resize: 'none' }}
-          maxLength="200"
-        />
-      </CardContent>
-      <CardActions>
+      <CardActions sx={{ justifyContent: 'center' }}>
         <Button component="label" htmlFor="audio-upload" size="small" variant="contained">
           Upload Audio
           <input
@@ -58,9 +46,10 @@ export default function ChoiceAudio() {
         </Button>
         <AudioPlayer src={selectedAudio && URL.createObjectURL(selectedAudio)} />
         <Button size="small" onClick={handleUpload} variant="contained">
-          Upload
+          Submit
         </Button>
       </CardActions>
     </Card>
   );
 }
+

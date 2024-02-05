@@ -103,29 +103,6 @@ function ProductHowItWorks() {
             </Grid>
           </Grid>
         </div>
-        <Grid container spacing={2} sx={{ justifyContent: 'center' }} marginTop={2}>
-          <Grid item>
-            <Link to="/storyboard">
-              <Button color="secondary" size="large" variant="contained">
-                Storyboarding
-              </Button>
-            </Link>
-          </Grid>
-          <Grid item>
-            <Link to="/audio">
-              <Button color="secondary" size="large" variant="contained">
-                Audio Creation
-              </Button>
-            </Link>
-          </Grid>
-          <Grid item>
-            <Link to="coverpage">
-              <Button color="secondary" size="large" variant="contained">
-                CoverPage Creation
-              </Button>
-            </Link>
-          </Grid>
-        </Grid>
       </Container>
     </Box>
   );

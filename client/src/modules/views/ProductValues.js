@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import Typography from '../components/Typography';
+import { Link } from 'react-router-dom';
+import Button from '../components/Button';
 
 const item = {
   display: 'flex',
@@ -35,11 +37,11 @@ function ProductValues() {
                 sx={{ height: 55 }}
               />
               <Typography variant="h6" sx={{ my: 5 }}>
-                generating aesthetic and attention-grabbing coverpages
+                Generating aesthetic and attention-grabbing coverpages
               </Typography>
               <Typography variant="h5">
                 {
-                  'instant generation of coverpages for social media posts'
+                  'Instant generation of coverpages for social media posts'
                 }
 
                 {
@@ -57,11 +59,11 @@ function ProductValues() {
                 sx={{ height: 55 }}
               />
               <Typography variant="h6" sx={{ my: 5 }}>
-                personalised storyboarding of content
+                Personalising a storyboard for your content
               </Typography>
               <Typography variant="h5">
                 {
-                  'anything you request for within a single click'
+                  'Anything you request for within a single click'
                 }
 
                 {', and delivered right to your fingertips'}
@@ -77,11 +79,11 @@ function ProductValues() {
                 sx={{ height: 55 }}
               />
               <Typography variant="h6" sx={{ my: 5 }}>
-                Convenient and fast output
+              Experience a user-friendly platform that delivers swift output
               </Typography>
               <Typography variant="h5">
-                {'By registering, you will access specially negotiated rates '}
-                {'that you will not find anywhere else.'}
+                {'By registering, you get instant access'}
+                {' to our ai generation services'}
               </Typography>
             </Box>
           </Grid>
