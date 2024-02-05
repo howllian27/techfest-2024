@@ -7,7 +7,7 @@ import './CoverPage.css';
 
 function CoverPage(){
     return (
-        <div>
+        <div className="coverpage-container">
           <AppAppBar backgroundColor="black" />
           <Typography variant="h4" align="center" sx={{ fontWeight: 'bold', marginTop: 4 }}>
           CoverPage Generator

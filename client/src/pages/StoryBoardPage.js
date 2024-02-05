@@ -5,7 +5,7 @@ import ChoiceText from '../modules/components/ChoiceText';
 import './StoryBoardPage.css';
 function StoryBoardPage(){
     return (
-        <div>
+        <div className="storyboard-container">
           <AppAppBar/>
           <div style={{ textAlign: 'center', marginTop: '60px' }}>
             <Typography variant="h4" align="center" sx={{ fontWeight: 'bold' }}>

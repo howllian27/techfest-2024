@@ -1,4 +1,11 @@
 /* storyboard.css */
+.storyboard-container {
+  background-image: url('/Users/chenglin/Documents/techfest-2024/client/public/static/images/storyboard_bg.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh; /* Set a minimum height to cover the entire viewport */
+}
 
 /* storyboard.css or inline styles */
 .choice-text-container {
@@ -7,12 +14,6 @@
     justify-content: center;
     align-items: center;
   }
-  
-  .choice-text-card {
-    background-color: #f4cfdf;
-    width: 70%; /* Adjust the width as needed */
-    padding: 30px; /* Adjust the padding as needed */
-    border-radius: 15px; /* Adjust the border-radius as needed */
-  }
+ 
   
   
