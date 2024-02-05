@@ -1,0 +1,12 @@
+.audio-page-container {
+    background-image: url('/Users/chenglin/Documents/techfest-2024/client/public/static/images/audiopage_bg.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
+  
+  .audio-content {
+    text-align: center;
+    padding-top: 100px;
+  }
+  
