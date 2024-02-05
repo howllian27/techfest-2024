@@ -53,7 +53,7 @@ export default function ProductHero() {
             </Link>
           </Grid>
           <Grid item>
-            <Link to="coverpage" style={{ textDecoration: 'none' }}>
+            <Link to="https://postapp-qjtvvx4vux9tn2mimx9jpk.streamlit.app/" style={{ textDecoration: 'none' }}>
               <Button color="secondary" size="large" variant="contained">
                 CoverPage Creation
               </Button>
