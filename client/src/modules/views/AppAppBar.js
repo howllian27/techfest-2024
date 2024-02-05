@@ -27,7 +27,7 @@ function AppAppBar() {
             sx={{ fontSize: 24, fontWeight: 'bold' }}
           >
             
-            {'CONTENT.AI'}
+            {'CONTENTIFY'}
     
           </Link>
           <Box sx={{ flex: 1 }} />
