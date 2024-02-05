@@ -24,10 +24,10 @@ function AppAppBar() {
             variant="h6"
             underline="none"
             color="inherit"
-            sx={{ fontSize: 24 }}
+            sx={{ fontSize: 24, fontWeight: 'bold' }}
           >
             
-            {'content.AI'}
+            {'CONTENT.AI'}
     
           </Link>
           <Box sx={{ flex: 1 }} />

@@ -7,7 +7,7 @@ import './AudioPage.css';
 function AudioPage(){
     return (
         <div className="audio-page-container">
-          <AppAppBar sx={{ backgroundColor: '#0000' }} />
+          <AppAppBar />
           <div className="audio-content">
           <Typography variant="h4" align="center" sx={{ fontWeight: 'bold', marginTop: -5 }}>
           AI Audio Generator
